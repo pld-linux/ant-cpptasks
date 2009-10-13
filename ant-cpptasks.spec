@@ -15,7 +15,7 @@ Version:	1.0
 Release:	0.%{_rc}.1
 License:	Apache v2.0
 Group:		Development/Languages/Java
-Source0: http://downloads.sourceforge.net/project/ant-contrib/ant-contrib/cpptasks-1.0-beta5/cpptasks-1.0%{_rc}.tar.gz
+Source0:	http://dl.sourceforge.net/project/ant-contrib/ant-contrib/cpptasks-1.0-beta5/cpptasks-%{version}%{_rc}.tar.gz
 # Source0-md5:	7f0f7732acd0c82f7efb228f667ec79a
 URL:		http://sf.net/projects/ant-contrib
 BuildRequires:	ant
@@ -32,9 +32,10 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-The cc task can compile various source languages and produce executables,
-shared libraries (aka DLL's) and static libraries. Compiler adaptors are
-currently available for C/C++, FORTRAN, MIDL and Windows Resource compilers.
+The cc task can compile various source languages and produce
+executables, shared libraries (aka DLL's) and static libraries.
+Compiler adaptors are currently available for C/C++, FORTRAN, MIDL and
+Windows Resource compilers.
 
 %prep
 %setup -q -n cpptasks-%{version}%{_rc}
