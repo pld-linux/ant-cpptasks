@@ -52,7 +52,7 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_javadir}/ant
 
 # jars
-cp -a target/lib/cpptasks.jar $RPM_BUILD_ROOT%{_javadir}/ant/cpptasks.jar
+cp -a target/lib/cpptasks.jar $RPM_BUILD_ROOT%{_javadir}/ant/ant-cpptasks.jar
 
 %clean
 rm -rf $RPM_BUILD_ROOT
