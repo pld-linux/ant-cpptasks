@@ -1,10 +1,4 @@
 
-%if "%{pld_release}" == "ti"
-%bcond_without	java_sun	# build with gcj
-%else
-%bcond_with	java_sun	# build with java-sun
-%endif
-#
 %include	/usr/lib/rpm/macros.java
 
 %define		_rc	b5
@@ -19,11 +13,9 @@ Source0:	http://dl.sourceforge.net/project/ant-contrib/ant-contrib/cpptasks-1.0-
 # Source0-md5:	7f0f7732acd0c82f7efb228f667ec79a
 URL:		http://sf.net/projects/ant-contrib
 BuildRequires:	ant
-%{!?with_java_sun:BuildRequires:	java-gcj-compat-devel}
-%{?with_java_sun:BuildRequires:	java-sun}
+BuildRequires:	jdk
 BuildRequires:	java-xerces
 BuildRequires:	jpackage-utils
-BuildRequires:	rpm >= 4.4.9-56
 BuildRequires:	rpm-javaprov
 BuildRequires:	rpmbuild(macros) >= 1.300
 # for %{_javadir}
