@@ -1,5 +1,4 @@
 
-%include	/usr/lib/rpm/macros.java
 
 %define		_rc	b5
 
